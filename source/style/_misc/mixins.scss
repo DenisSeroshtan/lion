@@ -59,3 +59,30 @@
 		@content;
 	}
 }
+//background
+@mixin bg-pattern($bg-image:black){
+	@if $bg-image == black {
+		background: #000 url(/assets/img/bg/pattern-black1.png) repeat;
+	}
+	@if $bg-image == white {
+		background: #fff url(/assets/img/bg/pattern-white.png) repeat;
+	}
+	@if $bg-image == grey {
+		background: #333 url(/assets/img/bg/pattern-grey.png) repeat;
+	}
+}
+//placeholder
+@mixin placeholder{
+	&::-webkit-input-placeholder{
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}

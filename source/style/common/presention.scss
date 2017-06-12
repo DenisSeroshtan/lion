@@ -1,19 +1,41 @@
-
 .presention__top{
 	min-height: rem(425px);
-	background: black;
-	background-image: url(/assets/img/bg/pattern-black1.png);
+	@include bg-pattern();
 
 }
 .container{
-	&.presention{
+	&.presention__top{
 
 	}
 }
 .presention__title-top{
 	@include roboto();
 	@include font(48px, #fff);
+	text-shadow: 1px 1px 3px #222;
 	text-align: center;
 	text-transform: uppercase;
 	padding: rem(35px) 0;
+}
+.presention__bottom{
+	min-height:rem(320px);
+	@include bg-pattern(white);
+}
+.container{
+	&.presention__bottom {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		flex: 1 1 rem(460px);
+	}
+}
+.presention__bottom-left{
+	min-width:50%;
+	text-align: center;
+}
+presention__bottom-img{
+	max-width:100%;
+}
+.presention__bottom-right{
+	min-width:50%;
+	text-align: center;
 }
