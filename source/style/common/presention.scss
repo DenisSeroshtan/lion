@@ -1,0 +1,19 @@
+
+.presention__top{
+	min-height: rem(425px);
+	background: black;
+	background-image: url(/assets/img/bg/pattern-black1.png);
+
+}
+.container{
+	&.presention{
+
+	}
+}
+.presention__title-top{
+	@include roboto();
+	@include font(48px, #fff);
+	text-align: center;
+	text-transform: uppercase;
+	padding: rem(35px) 0;
+}

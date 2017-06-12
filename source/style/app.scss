@@ -1,0 +1,11 @@
+//color
+$black:#111;
+$grey:#333;
+$yellow:#ffcc00;
+
+//common style
+@import "_misc/fonts";
+@import "_misc/mixins";
+@import "_misc/adjustment";
+//section
+@import "common/presention";
