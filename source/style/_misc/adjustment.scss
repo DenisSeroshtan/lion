@@ -3,28 +3,27 @@ $container-width: 1000px;
 html{
 	box-sizing: border-box;
 	font-size: 16px;
-	//@include desktop {
-	//	font-size: 16px;
-	//}
-	//
-	//@include laptop {
-	//	font-size: 15px;
-	//}
-	//
-	//@include tablets {
-	//	font-size: 14px;
-	//}
-	//
-	//@include phones {
-	//	font-size: 13px;
-	//}
+	@include desktop {
+		font-size: 16px;
+	}
+
+	@include laptop {
+		font-size: 15px;
+	}
+
+	@include tablets {
+		font-size: 14px;
+	}
+
+	@include phones {
+		font-size: 13px;
+	}
 }
 
 body,
 html {
 	width: 100%;
 	height: 100%;
-
 }
 
 *, *:before, *:after{
@@ -42,21 +41,25 @@ body {
 	overflow: hidden;
 	position: relative;
 	margin: 0 auto;
-	//@include desktop {
-	//	width: 970px;
-	//}
-	//
-	//@include laptop {
-	//	width: 750px;
-	//}
-	//
-	//@include tablets {
-	//	width: 480px;
-	//}
-	//
-	//@include phones {
-	//	width: auto;
-	//}
+	@include desktop {
+		width: 1000px;
+
+	}
+
+	@include laptop {
+		width: 750px;
+		//padding: 0 rem(20px);
+	}
+
+	@include tablets {
+		width: 480px;
+		padding: 0 rem(20px);
+	}
+
+	@include phones {
+		width: auto;
+		min-width: 320px;
+	}
 }
 
 li {

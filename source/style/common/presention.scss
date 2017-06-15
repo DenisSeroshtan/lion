@@ -20,22 +20,79 @@
 	min-height:rem(320px);
 	@include bg-pattern(white);
 }
-.container{
-	&.presention__bottom {
+
+.presention__bottom {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		flex: 1 1 rem(460px);
+		//margin-top: rem(-290px);
+}
+
+.presention__img-wrap{
+	max-height: rem(480px);
+	max-width: rem(393px);
+	overflow: hidden;
+	@include laptop{
+		max-width: rem(340px);
 	}
 }
-.presention__bottom-left{
-	min-width:50%;
-	text-align: center;
+.presention__bottom-img{
+	width:100%;
+	height:100%;
 }
-presention__bottom-img{
-	max-width:100%;
-}
-.presention__bottom-right{
-	min-width:50%;
+.presention__bottom-right {
+	min-width: 50%;
 	text-align: center;
+	@include roboto();
+	@include tablets{
+		width:100%
+	}
+}
+.presention__title-bottom{
+	text-transform: uppercase;
+	@include font(90px, #ffc000);
+}
+.presention__form {
+	min-height: rem(280px);
+	background: $yellow;
+	border: rem(5px) solid #fffffe;
+	box-shadow: 1px 1px 3px #000;
+}
+.label__email{
+	@include font(30px);
+	@include roboto();
+	margin: rem(20px) 0;
+	cursor: pointer;
+}
+.presention__input-email{
+	width: 90%;
+	height: rem(50px);
+	background: #fff;
+	@include roboto(regular);
+	@include font(20px);
+	padding-left: rem(20px);
+	@include placeholder{
+		@include roboto();
+		@include font(20px, #555);
+	}
+}
+.presention__form-text{
+	@include font(20px);
+	margin-top: rem(10px);
+}
+.presention__form-btn{
+	width: 90%;
+	min-height: rem(60px);
+	background: #b50000;
+	@include roboto();
+	@include font(30px, #fff);
+	margin-top: rem(10px);
+	cursor: pointer;
+	text-transform: uppercase;
+	box-shadow: 1px 1px 3px #700000;
+}
+.presention__timer-title{
+	@include roboto(regular);
+	@include font(22px);
+	margin-top: rem(15px);
 }

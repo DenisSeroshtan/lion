@@ -3,14 +3,23 @@ section.section.presention
 		.container.presention__top
 			h2.presention__title-top система власти над собой
 	.presention__bottom
-		.container.presention__bottom
-			.presention__bottom-left
-				img(src="/assets/img/presention/lion.png" class="presention__bottom-img")
-			.presention__bottom-right
-				h1.presention__title-bottom л.е.в
-				.presention__form-wrap
+		.container
+			.presention__bottom
+				.presention__bottom-left
+					.presention__img-wrap
+						img(src="/assets/img/presention/lion.png"
+						class="presention__bottom-img")
+				.presention__bottom-right
+					h1.presention__title-bottom л.е.в
 					form(action="#" method="post" class="presention__form")
-						.presention__form-title
-							label(for="email" class="label__email") Пройти обучение:
-						input(id="email" name="email" type="email" placeholder="введите сюда свой e-mail").presention__input-email
-				.presention__timer-title доступ к системе будет закрыт через
+							.presention__form-title
+								label(for="email"
+									class="label__email") Пройти обучение:
+							input.presention__input-email(id="email"
+								name="email" type="email"
+								placeholder="введите сюда свой e-mail")
+							.presention__form-text и нажмите на кнопку ниже
+							input(name="btn"
+								type="submit"
+								value="забрать систему").presention__form-btn
+					.presention__timer-title доступ к системе будет закрыт через
