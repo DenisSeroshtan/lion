@@ -1,52 +1,52 @@
+
 .presention__top{
 	min-height: rem(425px);
 	@include bg-pattern();
-
-}
-.container{
-	&.presention__top{
-
-	}
 }
 .presention__title-top{
 	@include roboto();
 	@include font(48px, #fff);
-	text-shadow: 1px 1px 3px #222;
+	text-shadow: 1px 1px rem(3px) #222;
 	text-align: center;
 	text-transform: uppercase;
 	padding: rem(35px) 0;
+	@include tablets{
+		font-size: rem(32px);
+	}
 }
+
 .presention__bottom{
 	min-height:rem(320px);
 	@include bg-pattern(white);
 }
 
-.presention__bottom {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		//margin-top: rem(-290px);
+.presention__bottom-wrap {
+	@include flex();
+	position: relative;
+	bottom:rem(290px);
+	margin-bottom: rem(-290px);
 }
-
+.presention__bottom-left{
+	flex-basis: 400px;
+	min-width: 50%;
+	@include phones{
+		display: none;
+	}
+}
 .presention__img-wrap{
 	max-height: rem(480px);
 	max-width: rem(393px);
 	overflow: hidden;
-	@include laptop{
-		max-width: rem(340px);
-	}
 }
 .presention__bottom-img{
 	width:100%;
 	height:100%;
 }
 .presention__bottom-right {
-	min-width: 50%;
+	flex-grow: 1;
 	text-align: center;
 	@include roboto();
-	@include tablets{
-		width:100%
-	}
+
 }
 .presention__title-bottom{
 	text-transform: uppercase;
@@ -56,7 +56,7 @@
 	min-height: rem(280px);
 	background: $yellow;
 	border: rem(5px) solid #fffffe;
-	box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px rem(3px) #000;
 }
 .label__email{
 	@include font(30px);
@@ -68,9 +68,14 @@
 	width: 90%;
 	height: rem(50px);
 	background: #fff;
+	border: 1px solid #e1a900;
 	@include roboto(regular);
 	@include font(20px);
-	padding-left: rem(20px);
+	text-indent: rem(20px);
+	&:focus{
+		border-color: transparent;
+		box-shadow: 0 0 rem(7px) #886600;
+	}
 	@include placeholder{
 		@include roboto();
 		@include font(20px, #555);
@@ -82,17 +87,33 @@
 }
 .presention__form-btn{
 	width: 90%;
-	min-height: rem(60px);
 	background: #b50000;
+	padding: rem(15px);
 	@include roboto();
 	@include font(30px, #fff);
 	margin-top: rem(10px);
 	cursor: pointer;
 	text-transform: uppercase;
-	box-shadow: 1px 1px 3px #700000;
+	text-shadow: 1px 1px rem(3px) #700000;
+	box-shadow: 1px 1px rem(4px) #000;
+	&:hover{
+		animation: growBtn linear .5s infinite;
+	}
 }
-.presention__timer-title{
-	@include roboto(regular);
-	@include font(22px);
-	margin-top: rem(15px);
+@keyframes growBtn {
+0 {
+	transform: scale(1);
 }
+50% {
+	  transform: scale(1.1);
+  }
+100% {
+	   transform: scale(1);
+   }
+}
+.presention__timer-title {
+@include roboto(regular);
+@include font(22px);
+margin-top: rem(15px);
+}
+

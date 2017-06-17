@@ -34,21 +34,23 @@ body {
 	line-height: 1.42;
 	-webkit-font-smoothing: antialiased;
 }
-
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+	min-width: 320px;
+}
 .container {
 	min-height: 100%;
 	max-width: $container-width;
-	overflow: hidden;
-	position: relative;
 	margin: 0 auto;
 	@include desktop {
 		width: 1000px;
-
 	}
 
 	@include laptop {
 		width: 750px;
-		//padding: 0 rem(20px);
+		padding: 0 rem(20px);
 	}
 
 	@include tablets {
@@ -58,7 +60,6 @@ body {
 
 	@include phones {
 		width: auto;
-		min-width: 320px;
 	}
 }
 
@@ -84,6 +85,7 @@ h6 {
 	font-weight: normal;
 	margin: 0;
 }
+//reset input
 input,
 label,
 select,
