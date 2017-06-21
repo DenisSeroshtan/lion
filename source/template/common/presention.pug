@@ -1,28 +1,14 @@
+-
+	var path = {
+		lion : "/assets/img/presention/lion.png",
+		luckyman : "/assets/img/presention/luckyman.png"
+	}
 section.section.presention
 	.presention__top
-		.container
-			h2.presention__title-top система власти над собой
+		h2.presention__title-top система власти над собой
 	.presention__bottom
 		.container
-			.presention__bottom-wrap
-				.presention__bottom-left
-					.presention__img-wrap
-						img(src="/assets/img/presention/lion.png"
-						class="presention__bottom-img")
-				.presention__bottom-right
-					h1.presention__title-bottom л.е.в
-					form(action="#" method="post" class="presention__form")
-							.presention__form-title
-								label(for="email"
-									class="label__email") Пройти обучение:
-							input.presention__input-email(id="email"
-								name="email" type="email" required
-								placeholder="введите сюда свой e-mail")
-							.presention__form-text и нажмите на кнопку ниже
-							input(name="btn"
-								type="submit"
-								value="забрать систему").presention__form-btn
-					.presention__timer
-						.presention__timer-title доступ к системе будет закрыт через
-						.countdown
-						#note
+
+			+orderBlank(path.lion, 'upper', 0)
+			+orderBlank(path.luckyman, classWrap, 2)
+

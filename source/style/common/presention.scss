@@ -22,9 +22,11 @@
 
 .presention__bottom-wrap {
 	@include flex();
-	position: relative;
-	bottom:rem(290px);
-	margin-bottom: rem(-290px);
+		&.upper{
+			position: relative;
+			bottom:rem(290px);
+			margin-bottom: rem(-290px);
+	}
 }
 .presention__bottom-left{
 	flex-basis: 400px;
@@ -112,9 +114,13 @@
    }
 }
 //  timer
+.presention__timer{
+	margin: rem(15px) 0 rem(50px) 0;
+}
 .presention__timer-title {
 @include roboto(regular);
 @include font(22px);
-margin-top: rem(15px);
 }
-
+.countdownHolder{
+	font-size: rem(30px);
+}

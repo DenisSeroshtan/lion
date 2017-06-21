@@ -1,0 +1,47 @@
+mixin form
+	form(action="#" method="post" class="presention__form")
+		.presention__form-title
+			label(for="email"
+			class="label__email") Пройти обучение:
+		input.presention__input-email(id="email"
+		name="email" type="email" required
+		placeholder="введите сюда свой e-mail")
+		.presention__form-text и нажмите на кнопку ниже
+		input(name="btn"
+		type="submit"
+		value="забрать систему").presention__form-btn
+
+mixin timer(count)
+	case count
+		when 0
+		when 1
+			.presention__timer
+				.presention__timer-title доступ к системе будет закрыт через
+				.countdown
+				#note
+		default
+			.presention__timer
+				.presention__timer-title доступ к системе будет закрыт через
+				div(class=`countdown${count}`)
+				div(id=`note${count}`)
+
+
+mixin orderBlank(path, classWrap = " ", timerCount)
+	div(class="presention__bottom-wrap" + ' ' + classWrap)
+		.presention__bottom-left
+			.presention__img-wrap
+				img(src = path
+				class="presention__bottom-img")
+		.presention__bottom-right
+			case timerCount
+				when 0
+				when 1
+					h1.presention__title-bottom л.е.в
+					+form
+					+timer(timerCount)
+				default
+					+form
+					+timer(timerCount)
+
+
+
