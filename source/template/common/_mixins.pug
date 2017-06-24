@@ -26,22 +26,28 @@ mixin timer(count)
 				div(id=`note${count}`)
 
 
-mixin orderBlank(path, classWrap = " ", timerCount)
-	div(class="presention__bottom-wrap" + ' ' + classWrap)
-		.presention__bottom-left
-			.presention__img-wrap
-				img(src = path
-				class="presention__bottom-img")
-		.presention__bottom-right
-			case timerCount
-				when 0
-				when 1
-					h1.presention__title-bottom л.е.в
-					+form
-					+timer(timerCount)
-				default
-					+form
-					+timer(timerCount)
+mixin mainPattern(path, classWrap = " ", timerCount)
+	.container
+		div(class=`presention__bottom-wrap ${classWrap}`)
+			.presention__bottom-left
+				.presention__img-wrap.img__wrap_less
+					img(src = path
+					class="presention__bottom-img")
+			.presention__bottom-right
+				case timerCount
+					when 0
+					when 1
+						h1.presention__title-bottom л.е.в
+						+form
+						+timer(timerCount)
+					when 2
+						+form
+						+timer(timerCount)
+					default
+						+timer(timerCount)
 
-
+mixin sectionTitle(title)
+	.section__title
+		.container
+			| #{title}
 

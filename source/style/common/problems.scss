@@ -1,0 +1,15 @@
+.section{
+	&.problems{
+		@include bg-pattern(grey);
+	}
+}
+.section__title{
+	width: 100%;
+	background: $yellow;
+	text-align: center;
+	@include roboto();
+	@include font(40px);
+	padding: rem(30px) 0;
+	text-transform: uppercase;
+	margin-bottom: rem(80px);
+}

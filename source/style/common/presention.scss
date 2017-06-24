@@ -29,11 +29,9 @@
 	}
 }
 .presention__bottom-left{
-	flex-basis: 400px;
+	//flex-basis: 400px;
 	min-width: 50%;
-	@include phones{
-		display: none;
-	}
+	margin-bottom: rem(20px);
 }
 .presention__img-wrap{
 	max-height: rem(480px);
@@ -47,6 +45,7 @@
 .presention__bottom-right {
 	flex-grow: 1;
 	text-align: center;
+	margin: auto;
 	@include roboto();
 
 }
@@ -116,10 +115,12 @@
 //  timer
 .presention__timer{
 	margin: rem(15px) 0 rem(50px) 0;
+	color: #000;
 }
 .presention__timer-title {
-@include roboto(regular);
-@include font(22px);
+	@include roboto(regular);
+	font-size:22px;
+	margin-bottom: rem(10px);
 }
 .countdownHolder{
 	font-size: rem(30px);

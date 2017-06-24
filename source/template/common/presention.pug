@@ -1,14 +1,12 @@
 -
 	var path = {
-		lion : "/assets/img/presention/lion.png",
-		luckyman : "/assets/img/presention/luckyman.png"
+		'lion' : "/assets/img/presention/lion.png",
+		'luckyman' : "/assets/img/presention/luckyman.png"
 	}
 section.section.presention
 	.presention__top
 		h2.presention__title-top система власти над собой
 	.presention__bottom
-		.container
-
-			+orderBlank(path.lion, 'upper', 0)
-			+orderBlank(path.luckyman, classWrap, 2)
+		+mainPattern(path.lion, 'upper', 0)
+		+mainPattern(path.luckyman, classWrap, 2)
 
