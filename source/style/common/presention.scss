@@ -125,3 +125,9 @@
 .countdownHolder{
 	font-size: rem(30px);
 }
+//section footer
+.section{
+	&.footer{
+		background: #fff;
+	}
+}

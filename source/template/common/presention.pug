@@ -1,12 +1,9 @@
--
-	var path = {
-		'lion' : "/assets/img/presention/lion.png",
-		'luckyman' : "/assets/img/presention/luckyman.png"
-	}
+
 section.section.presention
 	.presention__top
 		h2.presention__title-top система власти над собой
 	.presention__bottom
 		+mainPattern(path.lion, 'upper', 0)
-		+mainPattern(path.luckyman, classWrap, 2)
 
+section.section.footer
+		+mainPattern(path.luckyman, classWrap, 2)
