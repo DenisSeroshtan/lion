@@ -13,3 +13,35 @@
 	text-transform: uppercase;
 	margin-bottom: rem(80px);
 }
+.problems__bottom{
+	width: 100%;
+	@include bg-pattern();
+}
+
+.img__wrap_less {
+	max-width: rem(340px);
+	max-height: rem(453px);
+	@include tablets{
+		display: none;
+	}
+}
+.presention__timer_white{
+	color: #fff;
+}
+.btn__title{
+	@include roboto(regular);
+	@include font(30px, #fff);
+	text-transform: uppercase;
+}
+.text__yellow{
+		color: $yellow;
+}
+.problems__btn{
+	background: #d7d7d7;
+	color: #000;
+	text-shadow: none;
+	&:hover{
+		background: $yellow;
+	}
+
+}

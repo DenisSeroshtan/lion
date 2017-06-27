@@ -22,6 +22,7 @@
 
 .presention__bottom-wrap {
 	@include flex();
+	padding: rem(40px) 0;
 		&.upper{
 			position: relative;
 			bottom:rem(290px);
@@ -119,7 +120,7 @@
 }
 .presention__timer-title {
 	@include roboto(regular);
-	font-size:22px;
+	font-size:rem(22px);
 	margin-bottom: rem(10px);
 }
 .countdownHolder{

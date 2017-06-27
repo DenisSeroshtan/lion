@@ -19,32 +19,50 @@ mixin timer(count)
 				.presention__timer-title доступ к системе будет закрыт через
 				.countdown
 				#note
-		default
+		when 2
 			.presention__timer
+				.presention__timer-title доступ к системе будет закрыт через
+				.countdown2
+				#note2
+		default
+			.presention__timer.presention__timer_white
 				.presention__timer-title доступ к системе будет закрыт через
 				div(class=`countdown${count}`)
 				div(id=`note${count}`)
 
+mixin presentionLeft(path, imgWrap = 'presention__img-wrap')
+	.presention__bottom-left
+		div(class = imgWrap)
+			img(src = path
+			class="presention__bottom-img")
 
-mixin mainPattern(path, classWrap = " ", timerCount)
+mixin button
+	.btn__title Включи льва
+		span.text__yellow &nbsp;прямо сейчас!
+	button.presention__form-btn.problems__btn
+		| забрать систему!
+
+mixin presentionRight(timerCount)
+	.presention__bottom-right
+		case timerCount
+			when 0
+			when 1
+				h1.presention__title-bottom л.е.в
+				+form
+				+timer(timerCount)
+			when 2
+				+form
+				+timer(timerCount)
+			default
+				+button
+				+timer(timerCount)
+
+
+mixin mainPattern(path, classWrap = " ", imgWrap, timerCount)
 	.container
 		div(class=`presention__bottom-wrap ${classWrap}`)
-			.presention__bottom-left
-				.presention__img-wrap.img__wrap_less
-					img(src = path
-					class="presention__bottom-img")
-			.presention__bottom-right
-				case timerCount
-					when 0
-					when 1
-						h1.presention__title-bottom л.е.в
-						+form
-						+timer(timerCount)
-					when 2
-						+form
-						+timer(timerCount)
-					default
-						+timer(timerCount)
+			+presentionLeft(path, imgWrap)
+			+presentionRight(timerCount)
 
 mixin sectionTitle(title)
 	.section__title
