@@ -23,6 +23,7 @@
 .presention__bottom-wrap {
 	@include flex();
 	padding: rem(40px) 0;
+	margin: 0 rem(-40px);
 		&.upper{
 			position: relative;
 			bottom:rem(290px);
@@ -30,9 +31,8 @@
 	}
 }
 .presention__bottom-left{
-	//flex-basis: 400px;
-	min-width: 50%;
-	margin-bottom: rem(20px);
+	width: rem(460px);
+	margin: 0 rem(40px) rem(20px);
 }
 .presention__img-wrap{
 	max-height: rem(480px);
@@ -44,7 +44,8 @@
 	height:100%;
 }
 .presention__bottom-right {
-	flex-grow: 1;
+	width: rem(460px);
+	margin: 0 rem(40px);
 	text-align: center;
 	margin: auto;
 	@include roboto();

@@ -36,3 +36,7 @@ $.gulp.task('default', $.gulp.series(
         'serve'
     )
 ));
+$.gulp.task('server', $.gulp.parallel(
+    'watch',
+    'serve'
+));

@@ -93,3 +93,7 @@
 	flex-wrap: wrap;
 	justify-content: $justify-content;
 }
+@mixin bg-cover($url) {
+	background: url($url) no-repeat center center;
+	background-size: cover;
+}
