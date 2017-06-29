@@ -1,9 +1,11 @@
-.section{
-	&.problems{
+$borderColor: #bbb;
+
+.section {
+	&.problems {
 		@include bg-pattern(grey);
 	}
 }
-.section__title{
+.section__title {
 	width: 100%;
 	background: $yellow;
 	text-align: center;
@@ -13,7 +15,40 @@
 	text-transform: uppercase;
 	margin-bottom: rem(80px);
 }
-.problems__bottom{
+
+.problems__list {
+	@include flex();
+	margin: 0 -40px;
+	word-wrap: break-word;
+}
+.problems__items {
+	@extend %border;
+	width: rem(460px);
+	margin: 0 rem(40px) rem(80px);
+	display: flex;
+}
+.problems__items-left {
+	min-width: rem(100px);
+	position: relative;
+}
+.problems__items-num{
+	@include absolute-center;
+	margin:auto;
+	height:rem(75px);
+	width:rem(75px);
+	border-radius: 50%;
+	background: $yellow;
+	line-height:rem(75px);
+	text-align: center;
+}
+.problems__items-right {
+
+}
+
+
+
+
+.problems__bottom {
 	width: 100%;
 	@include bg-pattern();
 }
@@ -25,23 +60,22 @@
 		display: none;
 	}
 }
-.presention__timer_white{
+.presention__timer_white {
 	color: #fff;
 }
-.btn__title{
+.btn__title {
 	@include roboto(regular);
 	@include font(30px, #fff);
 	text-transform: uppercase;
 }
-.text__yellow{
+.text__yellow {
 		color: $yellow;
 }
-.problems__btn{
+.problems__btn {
 	background: #d7d7d7;
 	color: #000;
 	text-shadow: none;
 	&:hover{
 		background: $yellow;
 	}
-
 }
