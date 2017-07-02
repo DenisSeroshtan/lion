@@ -1,6 +1,6 @@
 'use strict';
-
 global.$ = {
+  YOUR_LOCALS: require('./content.json'),
   package: require('./package.json'),
   config: require('./gulp/config'),
   path: {
@@ -11,6 +11,7 @@ global.$ = {
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
+  fs: require('fs'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };

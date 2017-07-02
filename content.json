@@ -1,0 +1,34 @@
+{
+  "pages" : {
+    "Обо мне" : "/about.html",
+    "Главная" : "/main.html",
+    "Блог" : "/blog.html",
+    "Для теста" : "/test.html"
+  },
+  "size" : [
+      "presention__img-wrap",
+      "img__wrap_less"
+  ],
+  "path" : {
+
+      "lion" : "/assets/img/presention/lion.png",
+      "luckyman" : "/assets/img/presention/luckyman.png"
+
+  },
+
+  "reviews" : {
+    "dima" : {
+      "title" : "Дмитрий Ковальчук",
+      "occ" : "Основатель лофттскула"
+    },
+
+    "zar" : {
+      "title" : "Зар Захаров",
+      "occ" : "Ведущий программист"
+    },
+    "vova" : {
+      "title" : "vova Захаров",
+      "occ" : "Ведущий программист"
+    }
+  }
+}
