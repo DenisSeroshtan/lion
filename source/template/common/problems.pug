@@ -2,41 +2,19 @@ section.section.problems#problems
 	+sectionTitle('если внутри вас живут:')
 	.container
 		ul.problems__list
-			li.problems__items
-				.problems__items-left
-					.problems__items-num 1
-				.problems__items-right.problems1
-					.problems__items-title lorem ipsum
-					.problems__items-text
-						p.
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-			li.problems__items
-				.problems__items-left
-					.problems__items-num 1
-				.problems__items-right.problems2
-					.problems__items-title lorem ipsum
-					.problems__items-text
-						p.
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-
-			li.problems__items
-				.problems__items-left
-					.problems__items-num 1
-				.problems__items-right.problems3
-					.problems__items-title lorem ipsum
-					.problems__items-text
-						p.
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-
-			li.problems__items
-				.problems__items-left
-					.problems__items-num 1
-				.problems__items-right.problems4
-					.problems__items-title lorem ipsum
-					.problems__items-text
-						p.
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-
-
+			each object, key in problems
+				li.problems__items
+					.problems__items-left
+						.problems__items-num= key
+					div(class=`problems__items-right problems${key}`)
+						.problems__items-title= object['title']
+						.problems__items-text
+							p= object['text']
+		.problems__middle-title
+			| хватит себя жалеть!
+			|
+			span.orange Всего за  1 неделю
+			|
+			| вы сможете решить все свои проблемы!
 	.problems__bottom
 		+mainPattern(path.lion, classWrap, size[1], 3)

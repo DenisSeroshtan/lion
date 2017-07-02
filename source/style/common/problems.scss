@@ -18,7 +18,7 @@ $borderColor: #bbb;
 
 .problems__list {
 	@include flex();
-	margin: rem(80px) rem(-40px);
+	margin: rem(80px) rem(-40px) 0;
 }
 .problems__items {
 	display: flex;
@@ -28,6 +28,7 @@ $borderColor: #bbb;
 	width: rem(460px);
 	margin: 0 rem(40px) rem(80px);
 	word-wrap: break-word;
+	cursor: pointer;
 }
 .problems__items-left {
 	min-width: rem(100px);
@@ -64,15 +65,24 @@ $borderColor: #bbb;
 .problems__items-text {
 	@include roboto();
 	@include font(18px, #333);
+	transition: color .3s;
+}
+.problems__middle-title{
+	@extend .problems__items-title;
+	text-align: center;
+	margin: 0 0 rem(80px);
+	.orange {
+		color: #ff8a00;
+	}
 }
 //-_-_-_-_-_-_-_-_-_-_-_-_-/cycle images problems/_-_-_-_-_-_-_-_-_-_-_-_-//
 
-$imgProblems: (problems1, problems2, problems3, problems4);
-@each $png in $imgProblems{
-	.#{$png}:after {
+$imgProblems: (problems1, problems2, problems3, problems4, problems5, problems6);
+@each $img in $imgProblems{
+	.#{$img}:after {
 		content: "";
 		display: block;
-		@include bg-cover('/assets/img/problems/#{$png}.png');
+		@include bg-cover('/assets/img/problems/#{$img}.jpg');
 		width:100%;
 		height: 100%;
 		position: absolute;
@@ -82,17 +92,21 @@ $imgProblems: (problems1, problems2, problems3, problems4);
 		transition: .3s linear;
 	}
 	.problems__items:hover {
-		.#{$png}:after{
+		.#{$img}:after{
 			top: 0;
 			margin-top: 0;
 			opacity: .5;
 		}
-		.problems__items-num{
+		.problems__items-num {
 			transform: rotate(-360deg);
 			box-shadow: 0 0 rem(3px) $borderColor;
 		}
+		.problems__items-text {
+			color: #000;
+		}
 	}
 }
+
 //________________________/style mixin mainPattern/______________________//
 
 .problems__bottom {
