@@ -13,12 +13,12 @@ $borderColor: #bbb;
 	@include font(40px);
 	padding: rem(30px) 0;
 	text-transform: uppercase;
-	margin-bottom: rem(80px);
+
 }
 
 .problems__list {
 	@include flex();
-	margin: 0 rem(-40px);
+	margin: rem(80px) rem(-40px);
 }
 .problems__items {
 	display: flex;
@@ -28,12 +28,6 @@ $borderColor: #bbb;
 	width: rem(460px);
 	margin: 0 rem(40px) rem(80px);
 	word-wrap: break-word;
-	&:hover{
-		.problems__items-num{
-			transition: transform .3s linear;
-			transform: rotate(360deg);
-		}
-	}
 }
 .problems__items-left {
 	min-width: rem(100px);
@@ -52,6 +46,7 @@ $borderColor: #bbb;
 	text-align: center;
 	border: 2px solid #fff;
 	box-shadow: 1px 1px rem(3px) $borderColor;
+	transition:  .3s linear;
 
 }
 .problems__items-right {
@@ -90,7 +85,11 @@ $imgProblems: (problems1, problems2, problems3, problems4);
 		.#{$png}:after{
 			top: 0;
 			margin-top: 0;
-			opacity: .4;
+			opacity: .5;
+		}
+		.problems__items-num{
+			transform: rotate(-360deg);
+			box-shadow: 0 0 rem(3px) $borderColor;
 		}
 	}
 }
