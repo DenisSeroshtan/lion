@@ -29,7 +29,7 @@ $.gulp.task('default', $.gulp.series(
         'js:process',
         'image',
         'fonts',
-        //'sprite:svg',
+        'sprite:svg',
         'css:foundation'
     ),
     $.gulp.parallel(
