@@ -2,11 +2,14 @@
 $black:#111;
 $grey:#333;
 $yellow:#ffcc00;
+$borderColor: #bbb;
 
 //common style
 @import "_misc/fonts";
 @import "_misc/mixins";
 @import "_misc/adjustment";
 //section
-@import "common/presention";
+@import "common/presentation";
+@import "common/lists";
 @import "common/problems";
+@import "common/solution";

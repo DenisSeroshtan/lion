@@ -1,9 +1,9 @@
 
-.presention__top{
+.presentation__top{
 	min-height: rem(425px);
 	@include bg-pattern();
 }
-.presention__title-top{
+.presentation__title-top{
 	@include roboto();
 	@include font(48px, #fff);
 	text-shadow: 1px 1px rem(3px) #222;
@@ -15,12 +15,12 @@
 	}
 }
 
-.presention__bottom{
+.presentation__bottom{
 	min-height:rem(320px);
 	@include bg-pattern(white);
 }
 
-.presention__bottom-wrap {
+.presentation__bottom-wrap {
 	@include flex();
 	padding: rem(40px) 0;
 	margin: 0 rem(-40px);
@@ -30,20 +30,20 @@
 			margin-bottom: rem(-290px);
 	}
 }
-.presention__bottom-left{
+.presentation__bottom-left{
 	width: rem(460px);
 	margin: 0 rem(40px) rem(20px);
 }
-.presention__img-wrap{
+.presentation__img-wrap{
 	max-height: rem(480px);
 	max-width: rem(393px);
 	overflow: hidden;
 }
-.presention__bottom-img{
+.presentation__bottom-img{
 	width:100%;
 	height:100%;
 }
-.presention__bottom-right {
+.presentation__bottom-right {
 	width: rem(460px);
 	margin: 0 rem(40px);
 	text-align: center;
@@ -51,11 +51,11 @@
 	@include roboto();
 
 }
-.presention__title-bottom{
+.presentation__title-bottom{
 	text-transform: uppercase;
 	@include font(90px, #ffc000);
 }
-.presention__form {
+.presentation__form {
 	min-height: rem(280px);
 	background: $yellow;
 	border: rem(5px) solid #fffffe;
@@ -67,7 +67,7 @@
 	margin: rem(20px) 0;
 	cursor: pointer;
 }
-.presention__input-email{
+.presentation__input-email{
 	width: 90%;
 	height: rem(50px);
 	background: #fff;
@@ -84,11 +84,11 @@
 		@include font(20px, #555);
 	}
 }
-.presention__form-text{
+.presentation__form-text{
 	@include font(20px);
 	margin-top: rem(10px);
 }
-.presention__form-btn{
+.presentation__form-btn{
 	width: 90%;
 	background: #b50000;
 	padding: rem(15px);
@@ -115,11 +115,11 @@
    }
 }
 //  timer
-.presention__timer{
+.presentation__timer{
 	margin: rem(15px) 0 rem(50px) 0;
 	color: #000;
 }
-.presention__timer-title {
+.presentation__timer-title {
 	@include roboto(regular);
 	font-size:rem(22px);
 	margin-bottom: rem(10px);

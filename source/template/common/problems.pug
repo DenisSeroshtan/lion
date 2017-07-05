@@ -1,20 +1,12 @@
 section.section.problems#problems
 	+sectionTitle('если внутри вас живут:')
 	.container
-		ul.problems__list
-			each object, key in problems
-				li.problems__items
-					.problems__items-left
-						.problems__items-num= key
-					div(class=`problems__items-right problems${key}`)
-						.problems__items-title= object['title']
-						.problems__items-text
-							p= object['text']
-		.problems__middle-title
+		+items(problems)
+		.ps__middle-title
 			| хватит себя жалеть!
 			|
 			span.orange Всего за  1 неделю
 			|
 			| вы сможете решить все свои проблемы!
-	.problems__bottom
-		+mainPattern(path.lion, classWrap, size[1], 3)
+	.ps__bottom
+		+mainPattern(path.lion, classWrap, size[1], 4)

@@ -1,18 +1,10 @@
-section.section.problems#problems
+
+section.section.solution#solution
 	+sectionTitle('Чего вы добьётесь по нашей системе:')
 	.container
-		ul.problems__list
-			each object, key in problems
-				li.problems__items
-					.problems__items-left
-						.problems__items-num
-							svg.rocket
-								use(xlink:href="/assets/svg/sprite.svg#rocket")
-					div(class=`problems__items-right problems${key}`)
-						.problems__items-title= object['title']
-						.problems__items-text
-							p= object['text']
-		.problems__middle-title Давай же!
+		+items(solution)
+		.ps__middle-title Давай же!
 			.orange Возьми жизнь в свои руки!
-	.problems__bottom
+	.ps__bottom
 		+mainPattern(path.lion, classWrap, size[1], 3)
+

@@ -1,53 +1,53 @@
 mixin form
-	form(action="#" method="post" class="presention__form")
-		.presention__form-title
+	form(action="#" method="post" class="presentation__form")
+		.presentation__form-title
 			label(for="email"
 			class="label__email") Пройти обучение:
-		input.presention__input-email(id="email"
+		input.presentation__input-email(id="email"
 		name="email" type="email" required
 		placeholder="введите сюда свой e-mail")
-		.presention__form-text и нажмите на кнопку ниже
+		.presentation__form-text и нажмите на кнопку ниже
 		input(name="btn"
 		type="submit"
-		value="забрать систему").presention__form-btn
+		value="забрать систему").presentation__form-btn
 
 mixin timer(count)
 	case count
 		when 0
 		when 1
-			.presention__timer
-				.presention__timer-title доступ к системе будет закрыт через
+			.presentation__timer
+				.presentation__timer-title доступ к системе будет закрыт через
 				.countdown
 				#note
 		when 2
-			.presention__timer
-				.presention__timer-title доступ к системе будет закрыт через
+			.presentation__timer
+				.presentation__timer-title доступ к системе будет закрыт через
 				.countdown2
 				#note2
 		default
-			.presention__timer.presention__timer_white
-				.presention__timer-title доступ к системе будет закрыт через
+			.presentation__timer.presentation__timer_white
+				.presentation__timer-title доступ к системе будет закрыт через
 				div(class=`countdown${count}`)
 				div(id=`note${count}`)
 
-mixin presentionLeft(path, imgWrap = 'presention__img-wrap')
-	.presention__bottom-left
+mixin presentationLeft(path, imgWrap = 'presentation__img-wrap')
+	.presentation__bottom-left
 		div(class = imgWrap)
 			img(src = path
-			class="presention__bottom-img")
+			class="presentation__bottom-img")
 
 mixin button
 	.btn__title Включи льва
 		span.text__yellow &nbsp;прямо сейчас!
-	button.presention__form-btn.problems__btn
+	button.presentation__form-btn.ps__btn
 		| забрать систему!
 
-mixin presentionRight(timerCount)
-	.presention__bottom-right
+mixin presentationRight(timerCount)
+	.presentation__bottom-right
 		case timerCount
 			when 0
 			when 1
-				h1.presention__title-bottom л.е.в
+				h1.presentation__title-bottom л.е.в
 				+form
 				+timer(timerCount)
 			when 2
@@ -60,12 +60,26 @@ mixin presentionRight(timerCount)
 
 mixin mainPattern(path, classWrap = " ", imgWrap, timerCount)
 	.container
-		div(class=`presention__bottom-wrap ${classWrap}`)
-			+presentionLeft(path, imgWrap)
-			+presentionRight(timerCount)
+		div(class=`presentation__bottom-wrap ${classWrap}`)
+			+presentationLeft(path, imgWrap)
+			+presentationRight(timerCount)
 
 mixin sectionTitle(title)
 	.section__title
 		.container
 			| #{title}
 
+mixin items (content)
+	ul.ps__list
+		each object, key in content
+			li.ps__items
+				.ps__items-left
+					if (content == problems)
+						.ps__items-num= key
+					else if (content == solution)
+						svg(class=`solution__sprite ${key}`)
+							use(xlink:href=`/assets/svg/sprite.svg#${key}`)
+				div(class=`ps__items-right items__bg-${key}`)
+					.ps__items-title= object['title']
+					.ps__items-text
+						p= object['text']

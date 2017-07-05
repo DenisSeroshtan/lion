@@ -1,0 +1,13 @@
+.section {
+	&.solution {
+		@include bg-pattern(white);
+	}
+}
+.solution__sprite {
+	@include absolute-center;
+	height:rem(60px);
+	width:rem(60px);
+	transition:  transform .3s;
+}
+$imageSolution: (rocket, glove, lightning, bookmark, sword, diamond);
+@include cycle($imageSolution, solution);
