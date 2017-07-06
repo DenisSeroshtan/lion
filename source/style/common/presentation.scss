@@ -45,9 +45,8 @@
 }
 .presentation__bottom-right {
 	width: rem(460px);
-	margin: 0 rem(40px);
+	margin: auto rem(40px);
 	text-align: center;
-	margin: auto;
 	@include roboto();
 
 }

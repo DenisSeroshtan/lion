@@ -1,0 +1,10 @@
+section.section.steps
+	+sectionTitle('как получить систему')
+	.container
+		ul.steps__list
+			each value, key in steps
+				li.steps__items
+					div(class=`steps__items-sprite sprite__${key}`)
+					.steps__items-title= value
+
+

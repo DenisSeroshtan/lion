@@ -46,20 +46,22 @@ body {
 	margin: 0 auto;
 	@include desktop {
 		width: 1000px;
+		//padding: 0 rem(40px);
 	}
 
 	@include laptop {
 		width: 750px;
-		padding: 0 rem(20px);
+		padding: 0 rem(40px);
 	}
 
 	@include tablets {
 		width: 480px;
-		padding: 0 rem(20px);
+		padding: 0 rem(40px);
 	}
 
 	@include phones {
 		width: auto;
+		padding: 0 rem(40px);
 	}
 }
 

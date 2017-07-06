@@ -79,6 +79,7 @@
 .img__wrap_less {
 	max-width: rem(340px);
 	max-height: rem(453px);
+	margin: auto;
 	@include tablets{
 		display: none;
 	}
