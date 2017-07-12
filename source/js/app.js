@@ -1,3 +1,4 @@
+
 //countdown timer
 $(function(){
 
@@ -51,4 +52,17 @@ $(function(){
   $('.countdown5').countdown({timestamp: ts});
   $('.countdown6').countdown({timestamp: ts});
 
-})();
+});
+// smooth scroll to the section
+$(function () {
+
+  $('a[href^=#js]').on('click', function (e) {
+      e.preventDefault();
+      var currentLink = $(this).attr('href'),
+          currentScrollSection = $(currentLink).offset().top;
+      $('html, body').animate({
+        scrollTop : currentScrollSection
+      }, 1000);
+    });
+
+});

@@ -39,8 +39,9 @@ mixin presentationLeft(path, imgWrap = 'presentation__img-wrap')
 mixin button
 	.btn__title Включи льва
 		span.text__yellow &nbsp;прямо сейчас!
-	button.presentation__form-btn.ps__btn
-		| забрать систему!
+	button.ps__btn
+		a(href="#js-presentation").btn__link
+			| забрать систему!
 
 mixin presentationRight(timerCount)
 	.presentation__bottom-right

@@ -97,9 +97,18 @@
 }
 .ps__btn {
 	background: #d7d7d7;
-	color: #000;
-	text-shadow: none;
+	margin-top: rem(10px);
+	width: 90%;
 	&:hover{
 		background: $yellow;
 	}
+}
+.btn__link {
+	display: block;
+	padding: rem(15px);
+	@include roboto();
+	@include font(30px);
+	text-transform: uppercase;
+	box-shadow: 1px 1px rem(4px) #000;
+
 }

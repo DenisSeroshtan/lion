@@ -9,7 +9,7 @@
 	text-shadow: 1px 1px rem(3px) #222;
 	text-align: center;
 	text-transform: uppercase;
-	padding: rem(35px) 0;
+	padding-bottom: rem(35px);
 	@include tablets{
 		font-size: rem(32px);
 	}
@@ -87,6 +87,11 @@
 	@include font(20px);
 	margin-top: rem(10px);
 }
+@keyframes growBtn{
+	0% { transform: scale(1);}
+	50% { transform: scale(1.1);}
+	100% { transform: scale(1);}
+}
 .presentation__form-btn{
 	width: 90%;
 	background: #b50000;
@@ -102,17 +107,8 @@
 		animation: growBtn linear .5s infinite;
 	}
 }
-@keyframes growBtn {
-0 {
-	transform: scale(1);
-}
-50% {
-	  transform: scale(1.1);
-  }
-100% {
-	   transform: scale(1);
-   }
-}
+
+
 //  timer
 .presentation__timer{
 	margin: rem(15px) 0 rem(50px) 0;
