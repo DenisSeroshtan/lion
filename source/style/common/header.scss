@@ -1,8 +1,17 @@
 .header__nav {
-	background: rgba(0, 0, 0, 0.3);
+}
+.header__nav {
+	display: none;
+	z-index: 1000;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
 	transition: background .3s;
 	&:hover {
-		background: rgba(0, 0, 0, 0.7);
+		background: rgba(0, 0, 0, 0.8);
+	}
+	&.nav__fixed {
+		position: fixed;
+		display: block;
 	}
 }
 .nav__list {

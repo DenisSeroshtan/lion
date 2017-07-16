@@ -9,7 +9,7 @@
 	text-shadow: 1px 1px rem(3px) #222;
 	text-align: center;
 	text-transform: uppercase;
-	padding-bottom: rem(35px);
+	padding: rem(35px) 0;
 	@include tablets{
 		font-size: rem(32px);
 	}

@@ -55,14 +55,24 @@ $(function(){
 });
 // smooth scroll to the section
 $(function () {
-
   $('a[href^=#js]').on('click', function (e) {
       e.preventDefault();
       var currentLink = $(this).attr('href'),
-          currentScrollSection = $(currentLink).offset().top;
+          currentScrollSection = $(currentLink).offset().top,
+          navH = $(".header__nav").height();
       $('html, body').animate({
-        scrollTop : currentScrollSection
+        scrollTop : currentScrollSection - navH
       }, 1000);
     });
-
+});
+// show menu when scroll block presentation
+$(function () {
+   var presentationH = $('.presentation__top').height();
+   $(document).on('scroll', function () {
+     var documentScroll = $(this).scrollTop();
+     if (documentScroll > presentationH) {
+       $('.header__nav').addClass('nav__fixed')
+     }
+     else $('.header__nav').removeClass('nav__fixed');
+   });
 });
