@@ -40,7 +40,7 @@ mixin button
 	.btn__title Включи льва
 		span.text__yellow &nbsp;прямо сейчас!
 	button.ps__btn
-		a(href="#js-presentation").btn__link
+		a(href="#js-form").btn__link
 			| забрать систему!
 
 mixin presentationRight(timerCount)
@@ -48,7 +48,7 @@ mixin presentationRight(timerCount)
 		case timerCount
 			when 0
 			when 1
-				h1.presentation__title-bottom л.е.в
+				h1.presentation__title-bottom#js-form л.е.в
 				+form
 				+timer(timerCount)
 			when 2

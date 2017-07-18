@@ -53,26 +53,83 @@ $(function(){
   $('.countdown6').countdown({timestamp: ts});
 
 });
-// smooth scroll to the section
-$(function () {
-  $('a[href^=#js]').on('click', function (e) {
-      e.preventDefault();
-      var currentLink = $(this).attr('href'),
-          currentScrollSection = $(currentLink).offset().top,
-          navH = $(".header__nav").height();
-      $('html, body').animate({
-        scrollTop : currentScrollSection - navH
-      }, 1000);
-    });
-});
+
 // show menu when scroll block presentation
 $(function () {
    var presentationH = $('.presentation__top').height();
-   $(document).on('scroll', function () {
+   $(document).on('scroll', function (e) {
+     e.preventDefault();
      var documentScroll = $(this).scrollTop();
      if (documentScroll > presentationH) {
-       $('.header__nav').addClass('nav__fixed')
+       $('.header__nav').addClass('nav__fixed');
      }
      else $('.header__nav').removeClass('nav__fixed');
    });
 });
+//
+var menu_selector = ".header__nav";
+var navHeight = $(menu_selector).outerHeight();
+//
+function onScroll(){
+  var scrollTop = $(document).scrollTop() + navHeight;
+  $(menu_selector + " a").each(function(){
+    var hash = $(this).attr("href");
+    var target = $(hash);
+    var currentScroll = target.position().top ;
+    console.log(scrollTop);
+    if (currentScroll <= scrollTop && currentScroll + target.outerHeight() > scrollTop) {
+      $(menu_selector + " a.active").removeClass("active");
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
+  });
+};
+
+$(function () {
+
+  $(document).on("scroll", onScroll);
+
+  $("a[href^=#js]").click(function(e){
+    e.preventDefault();
+
+    $(document).on("scroll");
+    $(menu_selector + " a.active").removeClass("active");
+    $(this).addClass("active");
+    var hash = $(this).attr("href");
+    var target = $(hash);
+
+    $("html, body").stop(true, true).animate({
+      scrollTop: target.offset().top - navHeight + 1
+    }, 500, function(){
+      $(document).on("scroll", onScroll);
+    });
+
+   });
+
+});
+// $(function() {
+//   var $menu = $("#my-menu").mmenu({
+//     //   options
+//     "navbar":{
+//       "add" : false
+//     }
+//   });
+//   var $icon = $("#my-icon");
+//   var API = $menu.data( "mmenu" );
+//
+//   $icon.on( "click", function() {
+//     API.open();
+//   });
+//
+//   API.bind( "open:finish", function() {
+//     setTimeout(function() {
+//       $icon.addClass( "is-active" );
+//     }, 100);
+//   });
+//   API.bind( "close:finish", function() {
+//     setTimeout(function() {
+//       $icon.removeClass( "is-active" );
+//     }, 100);
+//   });
+// });

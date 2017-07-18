@@ -1,17 +1,26 @@
+
 .header__nav {
-}
-.header__nav {
-	display: none;
+	position: absolute;
+	top: -9999em;
 	z-index: 1000;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.5);
-	transition: background .3s;
+	transition: .3s;
+		@include tablets{
+			position: relative;
+			background: #fff;
+			top: 0;
+			left: 0;
+		}
 	&:hover {
 		background: rgba(0, 0, 0, 0.8);
 	}
 	&.nav__fixed {
 		position: fixed;
-		display: block;
+		top: 0;
+		@include tablets {
+			position: relative;
+		}
 	}
 }
 .nav__list {
@@ -20,6 +29,9 @@
 .nav__items {
 	display: inline-block;
 	vertical-align: middle;
+	@include tablets {
+		display: block;
+	}
 }
 .nav__items-link {
 	padding: 20px;
@@ -30,7 +42,7 @@
 	transition: color .3s;
 	text-decoration: none;
 	font-weight: 300;
-	&:hover {
+	&:hover, &.active {
 		color: #fff;
 	}
 }

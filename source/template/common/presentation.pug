@@ -1,7 +1,11 @@
 
-section.section.presentation
-	header.header
+section.section.presentation#js-presentation
 	.presentation__top
+		.container
+			.btn__humburger
+				button(id="my-icon" class="hamburger hamburger--3dx" type="button")
+					.hamburger-box
+						.hamburger-inner
 		nav.header__nav
 			.container
 				ul.nav__list
@@ -12,5 +16,4 @@ section.section.presentation
 			h2.presentation__title-top система власти над собой
 	.presentation__bottom
 		+mainPattern(path.lion, 'upper', lessClass, 0)
-
 
