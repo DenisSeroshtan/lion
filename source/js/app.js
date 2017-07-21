@@ -4,7 +4,6 @@ $(function(){
 
   var time = new Date();
   var target_time = new Date(time.getFullYear(), time.getMonth(), time.getDate());
-  console.log(target_time);
   var note = $('#note'),
       note2 = $('#note2'),
       note3 = $('#note3'),
@@ -54,60 +53,64 @@ $(function(){
 
 });
 
+(function () {
+
+  var menuSelector = ".header__nav";
+  var activeClass = "active";
+  var navHeight = $(menuSelector).outerHeight();
+
 // show menu when scroll block presentation
-$(function () {
-   var presentationH = $('.presentation__top').height();
-   $(document).on('scroll', function (e) {
-     e.preventDefault();
-     var documentScroll = $(this).scrollTop();
-     if (documentScroll > presentationH) {
-       $('.header__nav').addClass('nav__fixed');
-     }
-     else $('.header__nav').removeClass('nav__fixed');
-   });
-});
-//
-var menu_selector = ".header__nav";
-var navHeight = $(menu_selector).outerHeight();
-//
-function onScroll(){
-  var scrollTop = $(document).scrollTop() + navHeight;
-  $(menu_selector + " a").each(function(){
-    var hash = $(this).attr("href");
-    var target = $(hash);
-    var currentScroll = target.position().top ;
-    console.log(scrollTop);
-    if (currentScroll <= scrollTop && currentScroll + target.outerHeight() > scrollTop) {
-      $(menu_selector + " a.active").removeClass("active");
-      $(this).addClass("active");
-    } else {
-      $(this).removeClass("active");
-    }
+  $(function () {
+     var presentationH = $('.presentation__top').height();
+     $(document).on('scroll', function (e) {
+       e.preventDefault();
+       var documentScroll = $(this).scrollTop();
+       if (documentScroll > presentationH) {
+         $(menuSelector).addClass('nav__fixed');
+       }
+       else $(menuSelector).removeClass('nav__fixed');
+     });
   });
-};
 
-$(function () {
-
-  $(document).on("scroll", onScroll);
-
-  $("a[href^=#js]").click(function(e){
-    e.preventDefault();
-
-    $(document).on("scroll");
-    $(menu_selector + " a.active").removeClass("active");
-    $(this).addClass("active");
-    var hash = $(this).attr("href");
-    var target = $(hash);
-
-    $("html, body").stop(true, true).animate({
-      scrollTop: target.offset().top - navHeight + 1
-    }, 500, function(){
-      $(document).on("scroll", onScroll);
+  
+  function onScroll(){
+    var scrollTop = $(document).scrollTop() + navHeight;
+    $(menuSelector + " a").each(function(){
+      var hash = $(this).attr("href");
+      var target = $(hash);
+      var currentScroll = target.position().top ;
+      if (currentScroll <= scrollTop && currentScroll + target.outerHeight() > scrollTop) {
+        $(menuSelector + " a." + activeClass).removeClass(activeClass);
+        $(this).addClass(activeClass);
+      } else {
+        $(this).removeClass(activeClass);
+      }
     });
+  };
 
-   });
+  $(function () {
 
-});
+    $(document).on("scroll", onScroll);
+
+    $("a[href^=#js]").click(function(e){
+      e.preventDefault();
+
+      $(document).on("scroll");
+      $(menuSelector + " a." + activeClass).removeClass(activeClass);
+      $(this).addClass(activeClass);
+      var hash = $(this).attr("href");
+      var target = $(hash);
+
+      $("html, body").stop(true, true).animate({
+        scrollTop: target.offset().top - navHeight + 1
+      }, 500, function(){
+        $(document).on("scroll", onScroll);
+      });
+
+    });
+  });
+})();
+//
 // $(function() {
 //   var $menu = $("#my-menu").mmenu({
 //     //   options
