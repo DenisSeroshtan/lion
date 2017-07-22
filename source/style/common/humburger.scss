@@ -1,14 +1,18 @@
-.btn__humburger {
+
+.btn__hamburger {
 	display: none;
-	@include tablets {
+	@include laptop {
 		display: inline-block;
 		position: fixed;
 		z-index: 2000;
-		//left: 100%;
+		right: 5%;
+	}
+	@include phones {
+		right: 2%
 	}
 }
 .hamburger {
-	padding: 15px 0 15px;
+	padding: rem(20px) 0 rem(15px) rem(15px);
 	display: inline-block;
 	cursor: pointer;
 	transition-property: opacity, filter;
@@ -28,8 +32,8 @@
 }
 
 .hamburger-box {
-	width: 40px;
-	height: 24px;
+	width: rem(40px);
+	height: rem(24px);
 	display: inline-block;
 	position: relative;
 }
@@ -37,14 +41,14 @@
 .hamburger-inner {
 	display: block;
 	top: 50%;
-	margin-top: -2px;
+	margin-top: rem(-2px);
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-	width: 40px;
-	height: 4px;
-	background-color: #000;
-	border-radius: 4px;
+	width: rem(40px);
+	height: rem(4px);
+	background-color: $black;
+	border-radius: rem(4px);
 	position: absolute;
 	transition-property: transform;
 	transition-duration: 0.15s;
@@ -57,16 +61,16 @@
 }
 
 .hamburger-inner::before {
-	top: -10px;
+	top: rem(-10px);
 }
 
 .hamburger-inner::after {
-	bottom: -10px;
+	bottom: rem(-10px);
 }
 
 
 .hamburger--3dx .hamburger-box {
-	perspective: 80px;
+	perspective: rem(80px);
 }
 
 .hamburger--3dx .hamburger-inner {
@@ -83,9 +87,9 @@
 }
 
 .hamburger--3dx.is-active .hamburger-inner::before {
-	transform: translate3d(0, 10px, 0) rotate(45deg);
+	transform: translate3d(0, rem(10px), 0) rotate(45deg);
 }
 
 .hamburger--3dx.is-active .hamburger-inner::after {
-	transform: translate3d(0, -10px, 0) rotate(-45deg);
+	transform: translate3d(0, rem(-10px), 0) rotate(-45deg);
 }

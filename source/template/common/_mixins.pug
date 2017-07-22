@@ -91,9 +91,9 @@ mixin menu(className = "")
 			ul(class = `nav__list${className}`)
 				each value, key in nav
 					li(class = `nav__items${className}`)
-						a(href=`#${key}` class = `nav__items-${className}link`)= value
+						a(href=`#${key}` class = `nav__items${className}_link`)= value
 	else
-		nav(class = `header__nav${className}`)
+		div(class = `header__nav${className}`)
 			ul(class = `nav__list${className}`)
 				each value, key in nav
 					li(class = `nav__items${className}`)

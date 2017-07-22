@@ -6,8 +6,8 @@
 	width: 100%;
 	background: rgba(0, 0, 0, 0.5);
 	transition: .3s;
-		@include tablets{
-			//display: none;
+		@include laptop{
+			display: none;
 		}
 	&:hover {
 		background: rgba(0, 0, 0, 0.8);
@@ -15,9 +15,6 @@
 	&.nav__fixed {
 		position: fixed;
 		top: 0;
-		@include tablets {
-			position: relative;
-		}
 	}
 }
 .nav__list {
@@ -26,23 +23,36 @@
 .nav__items {
 	display: inline-block;
 	vertical-align: middle;
-	@include tablets {
-		display: block;
-	}
 }
 .nav__items-link {
-	padding: 20px;
+	padding: rem(20px);
 	display: block;
 	color: #bbb;
 	text-transform: uppercase;
-	text-shadow: 1px 1px 3px #222;
+	text-shadow: rem(1px) rem(1px) rem(3px) #222;
 	transition: color .3s;
-	text-decoration: none;
 	font-weight: 300;
 	&:hover, &.active {
 		color: #fff;
 	}
 }
+//-_-_-_-_-_-_-_-_-_-_-_-_-/styles mmenu plugin/_-_-_-_-_-_-_-_-_-_-_-_-//
 .nav-mobile {
-	//display: none;
+	display: none;
+	text-align: center;
+	@include bg-pattern(grey);
+	@include font(#1D1D1D);
+}
+.nav__items-mobile {
+	padding: rem(40px) 0;
+	&:hover {
+	background: rgba(255, 255, 255, 0.5);
+	}
+}
+.nav__items-mobile_link {
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px #bbb;
+}
+.mm-listview>li>a, .mm-listview>li>span {
+	padding: 20px;
 }
