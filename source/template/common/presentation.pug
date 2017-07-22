@@ -6,12 +6,7 @@ section.section.presentation#js-presentation
 				button(id="my-icon" class="hamburger hamburger--3dx" type="button")
 					.hamburger-box
 						.hamburger-inner
-		nav.header__nav
-			.container
-				ul.nav__list
-					each value, key in nav
-						li.nav__items
-							a(href=`#${key}`).nav__items-link= value
+		+menu
 		.container
 			h2.presentation__title-top система власти над собой
 	.presentation__bottom

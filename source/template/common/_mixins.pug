@@ -84,3 +84,17 @@ mixin items (content)
 					.ps__items-title= object['title']
 					.ps__items-text
 						p= object['text']
+
+mixin menu(className = "")
+	if (className == "-mobile")
+		nav(class = `nav${className}`)
+			ul(class = `nav__list${className}`)
+				each value, key in nav
+					li(class = `nav__items${className}`)
+						a(href=`#${key}` class = `nav__items-${className}link`)= value
+	else
+		nav(class = `header__nav${className}`)
+			ul(class = `nav__list${className}`)
+				each value, key in nav
+					li(class = `nav__items${className}`)
+						a(href=`#${key}` class = `nav__items-link`)= value

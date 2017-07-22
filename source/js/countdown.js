@@ -56,9 +56,11 @@ $(function(){
 //
 // $(function() {
 //   var $menu = $("#my-menu").mmenu({
-//     //   options
 //     "navbar":{
 //       "add" : false
+//     },
+//     "pageScroll": {
+//       "scroll" : true
 //     }
 //   });
 //   var $icon = $("#my-icon");
