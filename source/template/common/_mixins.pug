@@ -31,7 +31,7 @@ mixin timer(count)
 				div(id=`note${count}`)
 
 mixin presentationLeft(path, imgWrap = 'presentation__img-wrap')
-	.presentation__bottom-left
+	.presentation__bottom-left.wow
 		div(class = imgWrap)
 			img(src = path
 			class="presentation__bottom-img")
@@ -39,12 +39,12 @@ mixin presentationLeft(path, imgWrap = 'presentation__img-wrap')
 mixin button
 	.btn__title Включи льва
 		span.text__yellow &nbsp;прямо сейчас!
-	button.ps__btn
+	.ps__btn
 		a(href="#js-form").btn__link
 			| забрать систему!
 
 mixin presentationRight(timerCount)
-	.presentation__bottom-right
+	.presentation__bottom-right.wow
 		case timerCount
 			when 0
 			when 1
@@ -68,12 +68,13 @@ mixin mainPattern(path, classWrap = " ", imgWrap, timerCount)
 mixin sectionTitle(title)
 	.section__title
 		.container
-			| #{title}
+			.section__title-text.wow
+				| #{title}
 
 mixin items (content)
 	ul.ps__list
 		each object, key in content
-			li.ps__items
+			li.ps__items.wow
 				.ps__items-left
 					if (content == problems)
 						.ps__items-num= key

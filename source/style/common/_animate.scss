@@ -1,0 +1,327 @@
+
+$durationDefault: 1s !default;
+$delayDefault: 0s !default;
+$functionDefault: ease !default;
+$fillDefault: both;
+$visibilityDefault: hidden !default;
+
+@mixin duration($duration: 1s) {
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	-ms-animation-duration: $duration;
+	-o-animation-duration: $duration;
+	animation-duration: $duration;
+}
+
+@mixin delay($delay: .2s) {
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-ms-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+@mixin function($function: ease) {
+	-webkit-animation-timing-function: $function;
+	-moz-animation-timing-function: $function;
+	-ms-animation-timing-function: $function;
+	-o-animation-timing-function: $function;
+	animation-timing-function: $function;
+}
+
+@mixin fill-mode($fill: both) {
+	-webkit-animation-fill-mode: $fill;
+	-moz-animation-fill-mode: $fill;
+	-ms-animation-fill-mode: $fill;
+	-o-animation-fill-mode: $fill;
+	animation-fill-mode: $fill;
+}
+
+@mixin visibility($visibility: hidden) {
+	-webkit-backface-visibility: $visibility;
+	-moz-backface-visibility: $visibility;
+	-ms-backface-visibility: $visibility;
+	-o-backface-visibility: $visibility;
+	backface-visibility: $visibility;
+}
+
+@mixin transform-origin($transform-origin: center center) {
+	-webkit-transform-origin: $transform-origin;
+	-moz-transform-origin: $transform-origin;
+	-ms-transform-origin: $transform-origin;
+	-o-transform-origin: $transform-origin;
+	transform-origin: $transform-origin;
+}
+
+@mixin transform-style($transform-style: flat) {
+	-webkit-transform-style: $transform-style;
+	-moz-transform-style: $transform-style;
+	-o-transform-style: $transform-style;
+	transform-style: $transform-style;
+}
+
+@mixin animation-name($animation-name) {
+	-webkit-animation-name: $animation-name;
+	-moz-animation-name: $animation-name;
+	-ms-animation-name: $animation-name;
+	-o-animation-name: $animation-name;
+	animation-name: $animation-name;
+}
+
+@-webkit-keyframes fadeInLeft {
+	0% {opacity: 0; -webkit-transform: translateX(-20px);}
+	100% {opacity: 1; -webkit-transform: translateX(0);}
+}
+
+@-moz-keyframes fadeInLeft {
+	0% {opacity: 0; -moz-transform: translateX(-20px);}
+	100% {opacity: 1; -moz-transform: translateX(0);}
+}
+
+@-ms-keyframes fadeInLeft {
+	0% {opacity: 0; -ms-transform: translateX(-20px);}
+	100% {opacity: 1; -ms-transform: translateX(0);}
+}
+
+@-o-keyframes fadeInLeft {
+	0% {opacity: 0; -o-transform: translateX(-20px);}
+	100% {opacity: 1; -o-transform: translateX(0);}
+}
+
+@keyframes fadeInLeft {
+	0% {opacity: 0; transform: translateX(-20px);}
+	100% {opacity: 1; transform: translateX(0);}
+}
+
+@mixin fadeInLeft($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeInLeft);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+@-webkit-keyframes fadeInRight {
+	0% {opacity: 0; -webkit-transform: translateX(20px);}
+	100% {opacity: 1; -webkit-transform: translateX(0);}
+}
+
+@-moz-keyframes fadeInRight {
+	0% {opacity: 0; -moz-transform: translateX(20px);}
+	100% {opacity: 1; -moz-transform: translateX(0);}
+}
+
+@-ms-keyframes fadeInRight {
+	0% {opacity: 0; -ms-transform: translateX(20px);}
+	100% {opacity: 1; -ms-transform: translateX(0);}
+}
+
+@-o-keyframes fadeInRight {
+	0% {opacity: 0; -o-transform: translateX(20px);}
+	100% {opacity: 1; -o-transform: translateX(0);}
+}
+
+@keyframes fadeInRight {
+	0% {opacity: 0; transform: translateX(20px);}
+	100% {opacity: 1; transform: translateX(0);}
+}
+
+@mixin fadeInRight($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeInRight);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+@-webkit-keyframes bounceInUp {
+	0% {opacity: 0; -webkit-transform: translateY(2000px);}
+	60% {opacity: 1; -webkit-transform: translateY(-30px);}
+	80% {-webkit-transform: translateY(10px);}
+	100% {-webkit-transform: translateY(0);}
+}
+
+@-moz-keyframes bounceInUp {
+	0% {opacity: 0; -moz-transform: translateY(2000px);}
+	60% {opacity: 1; -moz-transform: translateY(-30px);}
+	80% {-moz-transform: translateY(10px);}
+	100% {-moz-transform: translateY(0);}
+}
+
+@-ms-keyframes bounceInUp {
+	0% {opacity: 0; -ms-transform: translateY(2000px);}
+	60% {opacity: 1; -ms-transform: translateY(-30px);}
+	80% {-ms-transform: translateY(10px);}
+	100% {-ms-transform: translateY(0);}
+}
+
+@-o-keyframes bounceInUp {
+	0% {opacity: 0; -o-transform: translateY(2000px);}
+	60% {opacity: 1; -o-transform: translateY(-30px);}
+	80% {-o-transform: translateY(10px);}
+	100% {-o-transform: translateY(0);}
+}
+
+@keyframes bounceInUp {
+	0% {opacity: 0; transform: translateY(2000px);}
+	60% {opacity: 1; transform: translateY(-30px);}
+	80% {transform: translateY(10px);}
+	100% {transform: translateY(0);}
+}
+
+@mixin bounceInUp($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(bounceInUp);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+@-webkit-keyframes fadeInUp {
+	0% {opacity: 0; -webkit-transform: translateY(20px);}
+	100% {opacity: 1; -webkit-transform: translateY(0);}
+}
+
+@-moz-keyframes fadeInUp {
+	0% {opacity: 0; -moz-transform: translateY(20px);}
+	100% {opacity: 1; -moz-transform: translateY(0);}
+}
+
+@-ms-keyframes fadeInUp {
+	0% {opacity: 0; -ms-transform: translateY(20px);}
+	100% {opacity: 1; -ms-transform: translateY(0);}
+}
+
+@-o-keyframes fadeInUp {
+	0% {opacity: 0; -o-transform: translateY(20px);}
+	100% {opacity: 1; -o-transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+	0% {opacity: 0; transform: translateY(20px);}
+	100% {opacity: 1; transform: translateY(0);}
+}
+
+@mixin fadeInUp($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeInUp);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-ms-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@mixin fadeIn($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeIn);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+@keyframes zoomIn {
+	from {
+		opacity: 0;
+		transform: scale3d(.3, .3, .3);
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+@mixin zoomIn($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(zoomIn);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+@keyframes zoomInUp {
+	from {
+		opacity: 0;
+		transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+		animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+	}
+
+	60% {
+		opacity: 1;
+		transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+		animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+	}
+}
+@mixin zoomInUp($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(zoomInUp);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+@-webkit-keyframes bounceIn {
+	0% {opacity: 0; -webkit-transform: scale(.3);}
+	50% {opacity: 1; -webkit-transform: scale(1.05);}
+	70% {-webkit-transform: scale(.9);}
+	100% {-webkit-transform: scale(1);}
+}
+
+@-moz-keyframes bounceIn {
+	0% {opacity: 0; -moz-transform: scale(.3);}
+	50% {opacity: 1; -moz-transform: scale(1.05);}
+	70% {-moz-transform: scale(.9);}
+	100% {-moz-transform: scale(1);}
+}
+
+@-ms-keyframes bounceIn {
+	0% {opacity: 0; -ms-transform: scale(.3);}
+	50% {opacity: 1; -ms-transform: scale(1.05);}
+	70% {-ms-transform: scale(.9);}
+	100% {-ms-transform: scale(1);}
+}
+
+@-o-keyframes bounceIn {
+	0% {opacity: 0; -o-transform: scale(.3);}
+	50% {opacity: 1; -o-transform: scale(1.05);}
+	70% {-o-transform: scale(.9);}
+	100% {-o-transform: scale(1);}
+}
+
+@keyframes bounceIn {
+	0% {opacity: 0; transform: scale(.3);}
+	50% {opacity: 1; transform: scale(1.05);}
+	70% {transform: scale(.9);}
+	100% {transform: scale(1);}
+}
+
+@mixin bounceIn($duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(bounceIn);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

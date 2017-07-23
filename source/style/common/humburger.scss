@@ -11,8 +11,9 @@
 		right: 2%
 	}
 }
+
 .hamburger {
-	padding: rem(20px) 0 rem(15px) rem(15px);
+	padding: rem(20px) rem(5px) rem(15px) rem(15px);
 	display: inline-block;
 	cursor: pointer;
 	transition-property: opacity, filter;
@@ -25,6 +26,17 @@
 	border: 0;
 	margin: 0;
 	overflow: visible;
+	outline: none;
+	transition: .3s;
+	&:hover {
+		.hamburger-inner::before {
+			transform: translate3d(rem(8px), 0, 0) rotate(45deg) scale(0.7, 1);
+		}
+
+		.hamburger-inner::after {
+			transform: translate3d(rem(8px), 0, 0) rotate(-45deg) scale(0.7, 1);
+		}
+	}
 }
 
 .hamburger:hover {
@@ -67,7 +79,6 @@
 .hamburger-inner::after {
 	bottom: rem(-10px);
 }
-
 
 .hamburger--3dx .hamburger-box {
 	perspective: rem(80px);

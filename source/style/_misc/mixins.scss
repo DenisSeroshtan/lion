@@ -99,6 +99,9 @@
 }
 @mixin cycle($array, $bl_Left){
 	@each $img in $array{
+		.ps__items {
+			@include zoomIn();
+		}
 		.items__bg-#{$img}:after {
 			content: "";
 			display: block;

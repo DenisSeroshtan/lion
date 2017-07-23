@@ -13,6 +13,7 @@
 	@include tablets{
 		font-size: rem(32px);
 	}
+	@include bounceInUp();
 }
 
 .presentation__bottom{
@@ -33,6 +34,7 @@
 .presentation__bottom-left{
 	width: rem(460px);
 	margin: 0 rem(40px) rem(20px);
+	@include fadeInLeft($duration: 2s);
 }
 .presentation__img-wrap{
 	max-height: rem(480px);
@@ -48,6 +50,7 @@
 	margin: auto rem(40px);
 	text-align: center;
 	@include roboto();
+	@include fadeInRight($duration: 2s);
 
 }
 .presentation__title-bottom{

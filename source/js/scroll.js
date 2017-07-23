@@ -40,9 +40,9 @@
     $("a[href^=#js]").click(function(e){
       e.preventDefault();
 
-      $(document).on("scroll");
-      $(menuSelector + " a." + activeClass).removeClass(activeClass);
-      $(this).addClass(activeClass);
+      // $(document).on("scroll");
+      // $(menuSelector + " a." + activeClass).removeClass(activeClass);
+      // $(this).addClass(activeClass);
       var hash = $(this).attr("href");
       var target = $(hash);
 

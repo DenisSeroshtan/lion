@@ -8,6 +8,8 @@ $borderColor: #bbb;
 @import "_misc/fonts";
 @import "_misc/mixins";
 @import "_misc/adjustment";
+// animation
+@import "common/_animate";
 //section
 @import "common/presentation";
 @import "common/header";
