@@ -18,9 +18,17 @@ html
 		link(rel='stylesheet' href='/assets/css/app.css')
 		script(src='/assets/js/foundation.js' defer)
 		script(src='/assets/js/app.js' defer)
-		//script svg4everybody();
 
 
 	body
 		.wrapper
+			//-_-_-_-_-_-_-_-_-_-_-_-_-/preloader/_-_-_-_-_-_-_-_-_-_-_-_-//
+			.round
+			.pl__left
+			.pl__right
+			//-_-_-_-_-_-_-_-_-_-_-_-_-/content/_-_-_-_-_-_-_-_-_-_-_-_-//
 			block content
+
+		//-_-_-_-_-_-_-_-_-_-_-_-_-/svg sprite for IE/_-_-_-_-_-_-_-_-_-_-_-_-//
+		script(src='/assets/js/svg4everybody.min.js')
+		script svg4everybody();

@@ -22,7 +22,7 @@
 	word-wrap: break-word;
 	transition: .3s;
 	@include roboto();
-	@include zoomInUp($duration: 1.5s);
+	@include zoomInUp();
 	&:first-child {
 		margin-left: 0;
 	}
