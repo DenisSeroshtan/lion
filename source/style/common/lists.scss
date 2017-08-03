@@ -67,6 +67,7 @@
 }
 .ps__middle-title{
 	@extend .ps__items-title;
+	display: block;
 	text-align: center;
 	margin: 0 0 rem(80px);
 	@include bounceIn();
