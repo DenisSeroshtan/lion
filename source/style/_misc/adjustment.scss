@@ -45,17 +45,17 @@ body {
 	max-width: $container-width;
 	margin: 0 auto;
 	@include desktop {
-		width: 1000px;
+		max-width: 1000px;
 		//padding: 0 rem(40px);
 	}
 
 	@include laptop {
-		width: 750px;
+		max-width: 750px;
 		padding: 0 rem(40px);
 	}
 
 	@include tablets {
-		width: 480px;
+		max-width: 480px;
 		padding: 0 rem(40px);
 	}
 

@@ -19,7 +19,7 @@
 	min-height: rem(230px);
 	border: 1px solid $borderColor;
 	background: #fff;
-	width: rem(460px);
+	max-width: rem(460px);
 	margin: 0 rem(40px) rem(80px);
 	word-wrap: break-word;
 	cursor: pointer;
@@ -55,6 +55,10 @@
 	text-transform: uppercase;
 	@include roboto(regular);
 	@include font(30px);
+	display: inline-block;
+	@include phones {
+		@include font(20px);
+	}
 }
 .ps__items-text {
 	@include roboto();
@@ -94,6 +98,7 @@
 	@include roboto(regular);
 	@include font(30px, #fff);
 	text-transform: uppercase;
+	display: inline-block;
 }
 .text__yellow {
 	color: $yellow;
@@ -102,6 +107,7 @@
 	background: #d7d7d7;
 	margin-top: rem(10px);
 	width: 90%;
+	display: inline-block;
 	&:hover{
 		background: $yellow;
 	}
