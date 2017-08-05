@@ -7,6 +7,6 @@ module.exports = function() {
     $.gulp.watch(['./source/template/**/*.pug', './content.json'], $.gulp.series('pug'));
     $.gulp.watch('./source/img/**/*.*', $.gulp.series('image'));
     $.gulp.watch('./source/fonts/**/*.*', $.gulp.series('fonts')); 
-    //$.gulp.watch('./source/svg/**/*.*', $.gulp.series('sprite:svg'));
+    $.gulp.watch('./source/svg/**/*.*', $.gulp.series('sprite:svg'));
   });
 };

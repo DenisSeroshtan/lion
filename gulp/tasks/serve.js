@@ -8,6 +8,11 @@ module.exports = function() {
       notify: false
     });
 
-    $.browserSync.watch([$.config.root + '/**/*.*', '!**/*.css', '!**/*.css.map'], $.browserSync.reload);
+    $.browserSync.watch([
+      $.config.root + '/**/*.*',
+      '!**/*.css',
+      '!**/*.css.map'],
+      $.browserSync.reload
+    );
   });
 };

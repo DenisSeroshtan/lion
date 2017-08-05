@@ -12,6 +12,7 @@ global.$ = {
   gulp: require('gulp'),
   rimraf: require('rimraf'),
   fs: require('fs'),
+  gsmq: require('gulp-group-css-media-queries'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
@@ -38,6 +39,7 @@ $.gulp.task('default', $.gulp.series(
         'serve'
     )
 ));
+
 $.gulp.task('server', $.gulp.parallel(
     'watch',
     'serve'
