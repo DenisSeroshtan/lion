@@ -36,23 +36,3 @@
 		color: #fff;
 	}
 }
-//-_-_-_-_-_-_-_-_-_-_-_-_-/styles mmenu plugin/_-_-_-_-_-_-_-_-_-_-_-_-//
-.nav-mobile {
-	display: none;
-	text-align: center;
-	@include bg-pattern(grey);
-	@include font(#1D1D1D);
-}
-.nav__items-mobile {
-	padding: rem(40px) 0;
-	&:hover {
-	background: rgba(255, 255, 255, 0.5);
-	}
-}
-.nav__items-mobile_link {
-	text-transform: uppercase;
-	text-shadow: 1px 1px 2px #bbb;
-}
-.mm-listview>li>a, .mm-listview>li>span {
-	padding: 20px;
-}

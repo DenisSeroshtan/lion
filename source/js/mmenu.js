@@ -8,13 +8,18 @@ $(function() {
     },
     "offCanvas": {
       "position": "right"
-    }
+    },
+    "extensions" : [
+      "fx-menu-zoom",
+      "pagedim-black"
+    ]
   });
   var $icon = $(".hamburger");
   var API = $menu.data( "mmenu" );
 
   $icon.on( "click", function() {
     API.open();
+    API.close();
   });
 
   API.bind( "open:finish", function() {

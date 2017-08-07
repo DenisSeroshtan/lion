@@ -1,41 +1,37 @@
-
-.btn__hamburger {
+.hamburger {
 	display: none;
 	@include laptop {
 		display: inline-block;
 		position: fixed;
-		z-index: 2000;
+		z-index: 2;
 		right: 5%;
+		padding: 20px 5px 15px 15px;
+		display: inline-block;
+		cursor: pointer;
+		transition-property: opacity, filter;
+		transition-duration: 0.15s;
+		transition-timing-function: linear;
+		font: inherit;
+		color: inherit;
+		text-transform: none;
+		background-color: transparent;
+		border: 0;
+		margin: 0;
+		overflow: visible;
+		outline: none;
+		transition: .3s;
+		&:hover {
+			&-inner::before {
+				transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
+			}
+
+			&-inner::after {
+				transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+			}
+		}
 	}
 	@include phones {
-		right: 2%
-	}
-}
-
-.hamburger {
-	padding: rem(20px) rem(5px) rem(15px) rem(15px);
-	display: inline-block;
-	cursor: pointer;
-	transition-property: opacity, filter;
-	transition-duration: 0.15s;
-	transition-timing-function: linear;
-	font: inherit;
-	color: inherit;
-	text-transform: none;
-	background-color: transparent;
-	border: 0;
-	margin: 0;
-	overflow: visible;
-	outline: none;
-	transition: .3s;
-	&:hover {
-		.hamburger-inner::before {
-			transform: translate3d(rem(8px), 0, 0) rotate(45deg) scale(0.7, 1);
-		}
-
-		.hamburger-inner::after {
-			transform: translate3d(rem(8px), 0, 0) rotate(-45deg) scale(0.7, 1);
-		}
+		right: 2%;
 	}
 }
 
@@ -44,8 +40,8 @@
 }
 
 .hamburger-box {
-	width: rem(40px);
-	height: rem(24px);
+	width: 40px;
+	height: 24px;
 	display: inline-block;
 	position: relative;
 }
@@ -53,12 +49,12 @@
 .hamburger-inner {
 	display: block;
 	top: 50%;
-	margin-top: rem(-2px);
+	margin-top: -2px;
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-	width: rem(40px);
-	height: rem(4px);
+	width: 40px;
+	height: 4px;
 	background-color: $black;
 	border-radius: rem(4px);
 	position: absolute;
@@ -73,15 +69,15 @@
 }
 
 .hamburger-inner::before {
-	top: rem(-10px);
+	top: -10px;
 }
 
 .hamburger-inner::after {
-	bottom: rem(-10px);
+	bottom: -10px;
 }
 
 .hamburger--3dx .hamburger-box {
-	perspective: rem(80px);
+	perspective: 80px;
 }
 
 .hamburger--3dx .hamburger-inner {
@@ -98,9 +94,9 @@
 }
 
 .hamburger--3dx.is-active .hamburger-inner::before {
-	transform: translate3d(0, rem(10px), 0) rotate(45deg);
+	transform: translate3d(0, 10px, 0) rotate(45deg);
 }
 
 .hamburger--3dx.is-active .hamburger-inner::after {
-	transform: translate3d(0, rem(-10px), 0) rotate(-45deg);
+	transform: translate3d(0, -10px, 0) rotate(-45deg);
 }

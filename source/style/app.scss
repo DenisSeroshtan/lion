@@ -8,13 +8,14 @@ $borderColor: #bbb;
 @import "_misc/fonts";
 @import "_misc/mixins";
 @import "_misc/adjustment";
+@import "common/mmenu_reset";
 // animation
 @import "_misc/preloader";
 @import "common/_animate";
 //section
 @import "common/presentation";
 @import "common/header";
-@import "common/humburger";
+@import "common/hamburger";
 @import "common/lists";
 @import "common/problems";
 @import "common/solution";

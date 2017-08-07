@@ -1,6 +1,6 @@
 .pl__left, .pl__right{
 	position: absolute;
-	background: #222;
+	background: $black;
 	width: 51%;
 	height: 100%;
 	z-index: 2001;
@@ -31,8 +31,7 @@
 }
 .loaded {
 	.round{
-		transition: left .3s;
-		left: -9999em;
+		display: none;
 	}
 }
 
